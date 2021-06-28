@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Staatliches:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    width: 500px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px rgba($color: #000000, $alpha: 0.4);
+    padding: 0px 10px 10px 10px;
+    border-radius: 20px;
+    .card{
+        margin-top: 10px;
+        box-shadow: 0px 0px 5px rgba($color: #000000, $alpha: 0.4);
+        position: relative;
+        width: 480px;
+        height: 30px;
+        padding: 10px;
+        display: flex;
+        border-radius: 20px;
+        align-items: center;
+        &:active{
+            label{
+                color: rgb(24, 127, 224);
+            }
+        }
+        input{
+            appearance: none;
+            width: 450px;
+            height: 7px;
+            background-color: rgb(236, 236, 236);
+            border-radius: 20px;
+            transition: 0.4s ease;
+            &::-webkit-slider-thumb{
+                appearance: none;
+                border-radius: 50%;
+                background-color: rgb(63, 63, 63);
+                width: 15px;
+                height: 15px;
+                transition: 0.4s ease;
+                &:hover{
+                background-color: rgb(24, 127, 224);
+                }
+
+            }
+
+        }
+        label{
+            position: absolute;
+            color: rgb(46, 46, 46);
+            width: 32px;
+            height: 20px;
+            text-align: center;
+            right: 7px;
+            top: 10px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 18px;
+        }
+    }
+    button{
+        width: 70px;
+        height: 32px;
+        position: absolute;
+        bottom: 10px;
+        border-radius: 20px;
+        background-color: rgb(255, 255, 255);
+        border-color: transparent;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 18px;
+        box-shadow: 0px 0px 5px rgba($color: #000000, $alpha: 0.4);
+        transition: 0.3s ease;
+        &:hover{
+            
+        background-color: rgb(24, 127, 224);
+        color: rgb(255, 255, 255);
+        }
+    }
+}
